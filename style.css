@@ -1,0 +1,143 @@
+:root {
+    --Purple-700: hsl(248, 32%, 49%);
+    --Gray-900: hsl(249, 10%, 26%);
+    --Purple-350: hsl(246, 25%, 77%);
+    --Red-400: hsl(0, 100%, 74%);
+    --Green-400: hsl(154, 59%, 51%);
+}
+
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-image: url("images/bg-intro-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--Red-400);
+  color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    gap: 2.5rem;
+}
+
+h1 {
+    font-weight: 700;
+    max-width: 20ch;
+    font-size: 2.5rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px; /* تحديد عرض أقصى لليكون منسقاً */
+}
+
+.page > div, .page, form, .signup-form {
+  border-radius: 15px;
+  border: none;
+}
+
+.page > div {
+  background-color: var(--Purple-700);
+  padding: 10px;
+  text-align: center;
+  margin: 1.3em 0;
+  width: 100%;
+}
+
+.signup-form {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%; /* يتوسع بالكامل داخل الـ page */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* إزالة التكرار وتوحيد العرض */
+  gap: 1rem;
+  align-items: center;
+}
+
+form > input, .submit {
+  height: 50px;
+  width: 100%; /* جعل حقول الإدخال تأخذ عرض الفورم بالكامل */
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit {
+  background-color: var(--Green-400);
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 1px solid rgb(14, 176, 14);
+  transition: 0.3s;
+}
+
+.submit:hover {
+  opacity: 0.9;
+}
+
+.fot {
+  color: var(--Purple-350);
+  font-weight: 400;
+  font-size: small;
+  text-align: center;
+}
+ a {
+  color: var(--Red-400);
+  text-decoration: none;
+  font-weight: 700;
+}
+ a:hover {
+  text-decoration: underline;
+}
+.page > div , .signup-form {
+  box-shadow: 0px 8px  rgba(0, 0, 0, 0.2);
+}
+header{
+  display: flex;
+  flex-direction: column;
+}
+header p {
+  margin: auto;
+  max-width: 50ch;
+}
+.error ,.error2 {
+  color: var(--Red-400);
+  font-size: small;
+  text-align: left;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+/*media*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  body{
+    background-image: url('images/bg-intro-mobile.png') ;
+  }
+}
